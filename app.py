@@ -177,13 +177,13 @@ def home():
     if request.method == 'POST':
         # save video in dir
         f = request.files['file']
-        video_path = 'uploads/' + f.filename
+
         global FILE
         FILE = f.filename
+        video_path = os.path.join(os.getcwd(), 'uploads/' + FILE)
         f.save(video_path)
 
         # remove previous predictions
-        video_path = 'uploads/' + FILE
         files = glob.glob('static/images/*')
         for f in files:
             os.remove(f)
