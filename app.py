@@ -16,7 +16,7 @@ app = Flask(__name__, static_url_path='/static',
             template_folder='templates')
 
 # load trained model
-model = YOLO('best.pt')
+model = YOLO('model.pt')
 
 # Constants:
 # 1. confidence threshold
