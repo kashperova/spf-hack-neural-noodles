@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel= "stylesheet" type= "text/css" href= "../static/css/style.css">
+<head>
+    <title>SPF HACKATHON 2023 Object Detection</title>
+    <title>Object Detection</title>
+</head>
+<body>
+	<header>Все буде Україна!</header>
+    <center>
+        <center class="quote-container">
+    <blockquote>
+      Отак подивишся здаля<br/> На москаля, <br/> І ніби справді він людина,<br/>
+        Іде собі, мов сиротина,<br/> Очима - блим, губами - плям. <br/>
+        І десь трапляється хвилина,<br/> Його буває майже жаль, <br/>
+        А ближче підійдеш - скотина. <br/>
+        <br></r>
+      <span class="author"><i>Я. Таксюр</i></span>
+    </blockquote>
+    <div class="result_container">
+        <p id="result">Максимальна кількість орків на відео = {{ max_count }}</p>
+        <form id = 'form' method="POST" enctype="multipart/form-data">
+            {% if video %}
+              <input name="submit_button" class="button" type="submit" value="Завантажити розмічене відео"/><br></br>
+            {% endif %}
+            <input name="submit_button" class="button" type="submit" value="Завантажити серію зображень"/>
+        </form>
+    </div></center>
+</body>
+</html>

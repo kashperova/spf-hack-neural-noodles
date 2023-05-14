@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel= "stylesheet" type= "text/css" href= "../static/css/style.css">
+<head>
+	<title>SPF HACKATHON 2023 Object Detection</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+        ('#loading').hide();
+        ('#wait_msg').hide();
+    </script>
+</head>
+<body>
+	<header>Все буде Україна!</header>
+    <center>
+        <div class="quote-container">
+    <blockquote>
+      Отак подивишся здаля<br/> На москаля, <br/> І ніби справді він людина,<br/>
+        Іде собі, мов сиротина,<br/> Очима - блим, губами - плям. <br/>
+        І десь трапляється хвилина,<br/> Його буває майже жаль, <br/>
+        А ближче підійдеш - скотина. <br/>
+        <br></r>
+      <span class="author"><i>Я. Таксюр</i></span>
+    </blockquote>
+</div>
+    </center>
+    <center>
+        <p id="wait_msg">Варто зачекати</p>
+        <div id="loading" style="display:none;" class="spinner"></div>
+        <div id="content" class="form-container">
+        <form class="form" id = 'form' method="POST" enctype="multipart/form-data">
+          <span class="form-title">Обери відео для детекції</span>
+          <p class="form-paragraph">
+              Файл повинен бути формату .mp4 або .avi
+            </p>
+           <label for="file-input" class="drop-container">
+          <span class="drop-title">Перетягни сюди файл</span>
+          або
+          <input type="file" name="file" accept="video" required="" id="file-input">
+               <p></p>
+               <div class="checkbox-wrapper-23">
+                   Хочете завантажити розмічене відео?
+                   <center>
+                  <input name="video_check" type="checkbox" id="check-23">
+                  <label for="check-23" style="--size: 30px">
+                    <svg viewBox="0,0,50,50">
+                      <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                  </label>
+                   </center>
+                </div>
+               <br><br>
+               <input class="button" type="submit" value="Завантажити" onclick="$('#loading').show(); $('#wait_msg').show();$('#content').hide();">
+        </label>
+        </form>
+        </div>
+    </center>
+</body>
+</html>
